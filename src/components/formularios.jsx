@@ -52,7 +52,9 @@ const Formularios = () => {
                     {errors.email?.type === 'required' && <small className='fail'> complete this field</small>}
                     {errors.email?.type === 'validate' && <small className='fail'> email not valid</small>}
                 </div>
-                    <ReCAPTCHA sitekey="6Lf6mSclAAAAAKnvrnLSKz2mzfsyFeSBQYirQm4U" onChange={onChange}/>,
+                    <ReCAPTCHA 
+                        sitekey="6LdhnyclAAAAAHgv3sL_08JmSD8k1qHk7R33KJzS" onChange={onChange}
+                    />,
                 <button type='Submit'>Send</button>
             </form>
     
