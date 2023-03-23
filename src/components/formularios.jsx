@@ -2,8 +2,10 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import '../App.css'
 import isEmail from 'validator/lib/isEmail';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Formularios = () => {
+    const onChange = () => {}
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -50,7 +52,7 @@ const Formularios = () => {
                     {errors.email?.type === 'required' && <small className='fail'> complete this field</small>}
                     {errors.email?.type === 'validate' && <small className='fail'> email not valid</small>}
                 </div>
-
+                    <ReCAPTCHA sitekey="6Lf6mSclAAAAAKnvrnLSKz2mzfsyFeSBQYirQm4U" onChange={onChange}/>,
                 <button type='Submit'>Send</button>
             </form>
     
