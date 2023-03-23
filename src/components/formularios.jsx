@@ -2,6 +2,8 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import '../App.css'
 import isEmail from 'validator/lib/isEmail';
+import { DatePicker } from './DatePicker';
+
 
 const Formularios = () => {
 
@@ -49,10 +51,19 @@ const Formularios = () => {
                     } />
                     {errors.email?.type === 'required' && <small className='fail'> complete this field</small>}
                     {errors.email?.type === 'validate' && <small className='fail'> email not valid</small>}
+                    
+               
+               
                 </div>
 
+
+                <DatePicker/>
+
                 <button type='Submit'>Send</button>
+
+                
             </form>
+            
     
 
     )
