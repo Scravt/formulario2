@@ -4,11 +4,16 @@ import '../App.css'
 import isEmail from 'validator/lib/isEmail';
 import ReCAPTCHA from "react-google-recaptcha";
 
+
 const Formularios = () => {
-    const onChange = () => {}
+    
+
+    const onChange = (value) => {
+        console.log("Captcha value:", value);
+    }
 
     const { register, handleSubmit, formState: { errors } } = useForm()
-
+    
 
     const customSubmit = (data) => {
         console.log(data)
@@ -37,7 +42,7 @@ const Formularios = () => {
                         max: 89
                     })} />
                     {errors.age?.type === 'required' && <small className='fail'>Complete this field</small>}
-                    {errors.age?.type === 'min' && <small className='fail'>Minimum age 10 years</small>}
+                    {errors.age?.type === 'min' && <small className='fail'>Minimum age 18 years</small>}
                     {errors.age?.type === 'max' && <small className='fail'>Maximum age 89 years</small>}
                 </div>
 
@@ -53,8 +58,11 @@ const Formularios = () => {
                     {errors.email?.type === 'validate' && <small className='fail'> email not valid</small>}
                 </div>
                     <ReCAPTCHA 
-                        sitekey="6LdhnyclAAAAAHgv3sL_08JmSD8k1qHk7R33KJzS" onChange={onChange}
-                    />,
+                        
+                        sitekey="6LdhnyclAAAAAHgv3sL_08JmSD8k1qHk7R33KJzS" 
+                        onChange={onChange}
+                    />;
+
                 <button type='Submit'>Send</button>
             </form>
     
