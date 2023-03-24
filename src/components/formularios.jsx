@@ -1,8 +1,9 @@
 import React from 'react'
+
 import { useForm } from "react-hook-form"
 import '../App.css'
 import isEmail from 'validator/lib/isEmail';
-import { DatePicker } from './DatePicker';
+import  GDatePicker from './GDatePicker';
 
 
 const Formularios = () => {
@@ -57,7 +58,7 @@ const Formularios = () => {
                 </div>
 
 
-                <DatePicker/>
+                <GDatePicker/>
 
                 <button type='Submit'>Send</button>
 
