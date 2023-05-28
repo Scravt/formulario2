@@ -1,0 +1,10 @@
+
+comandos utiles de git
+
+git stash                                   stashea cambios temporalmente ()
+git stash pop                               el reverso del anterior
+git checkout -b  feature/nombre_de_rama     crea nueva rama en git local
+git branch                                  muestra todas als ramas locales
+git checkout  feature/rama donde queiro ir
+
+ramas por funcionalides  

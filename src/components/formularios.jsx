@@ -38,7 +38,7 @@ const Formularios = () => {
                         max: 89
                     })} />
                     {errors.age?.type === 'required' && <small className='fail'>Complete this field</small>}
-                    {errors.age?.type === 'min' && <small className='fail'>Minimum age 10 years</small>}
+                    {errors.age?.type === 'min' && <small className='fail'>Minimum age 18 years</small>}
                     {errors.age?.type === 'max' && <small className='fail'>Maximum age 89 years</small>}
                 </div>
 
