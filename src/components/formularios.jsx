@@ -6,7 +6,12 @@ import GDatePicker from './GDatePicker'
 
 
 
+
 const Formularios = () => {
+    
+    const onChange = (value) => {
+        console.log("Captcha value:", value);
+    }
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -58,6 +63,8 @@ const Formularios = () => {
                 </div>
 
                     <GDatePicker/>
+
+                  
                 
 
                 <button type='Submit'>Send</button>
