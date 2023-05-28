@@ -1,5 +1,6 @@
 import './App.css'
-import Formularios from './components/Formularios'
+import Formularios from './components/formularios'
+
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <div className='container'>
-      <Formularios />
+      <Formularios/>
     </div>
     
   )
