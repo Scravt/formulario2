@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import '../App.css'
 import isEmail from 'validator/lib/isEmail';
 import GDatePicker from './GDatePicker'
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 
@@ -63,8 +64,12 @@ const Formularios = () => {
                 </div>
 
                     <GDatePicker/>
+                    <ReCAPTCHA
+                        sitekey = '6LdhnyclAAAAAHgv3sL_08JmSD8k1qHk7R33KJzS'
+                        onChange={onChange}
+                    />
 
-                  
+                    
                 
 
                 <button type='Submit'>Send</button>
