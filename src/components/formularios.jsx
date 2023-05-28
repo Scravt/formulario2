@@ -1,7 +1,10 @@
 import React from 'react'
+
 import { useForm } from "react-hook-form"
 import '../App.css'
 import isEmail from 'validator/lib/isEmail';
+import  GDatePicker from './GDatePicker';
+
 
 const Formularios = () => {
 
@@ -35,7 +38,7 @@ const Formularios = () => {
                         max: 89
                     })} />
                     {errors.age?.type === 'required' && <small className='fail'>Complete this field</small>}
-                    {errors.age?.type === 'min' && <small className='fail'>Minimum age 10 years</small>}
+                    {errors.age?.type === 'min' && <small className='fail'>Minimum age 18 years</small>}
                     {errors.age?.type === 'max' && <small className='fail'>Maximum age 89 years</small>}
                 </div>
 
@@ -49,10 +52,19 @@ const Formularios = () => {
                     } />
                     {errors.email?.type === 'required' && <small className='fail'> complete this field</small>}
                     {errors.email?.type === 'validate' && <small className='fail'> email not valid</small>}
+                    
+               
+               
                 </div>
 
+
+                <GDatePicker/>
+
                 <button type='Submit'>Send</button>
+
+                
             </form>
+            
     
 
     )
